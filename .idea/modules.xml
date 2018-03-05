@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/craclicker.iml" filepath="$PROJECT_DIR$/.idea/modules/craclicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/craclicker_main.iml" filepath="$PROJECT_DIR$/.idea/modules/craclicker_main.iml" group="craclicker" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/craclicker_test.iml" filepath="$PROJECT_DIR$/.idea/modules/craclicker_test.iml" group="craclicker" />
+    </modules>
+  </component>
+</project>
