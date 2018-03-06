@@ -1,4 +1,4 @@
-group 'martim'
+group 'martimdev'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -28,5 +28,6 @@ apply plugin: 'javafx-gradle-plugin'
 
 jfx {
     mainClass = 'me.martimdev.craclicker.Main'
-    vendor = 'Martim'
+    deployDir = "'me.martimdev.craclicker"
+    vendor = 'martimdev'
 }

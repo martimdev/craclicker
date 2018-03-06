@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #303448;"
+            stylesheets="@../styles/menu.css" xmlns="http://javafx.com/javafx/8.0.141"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.martimdev.craclicker.Controller">
+    <children>
+        <MenuBar prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #1568AA;">
+            <menus>
+                <Menu mnemonicParsing="false" text="Mode">
+                    <items>
+                        <MenuItem fx:id="pressModeItem" mnemonicParsing="false" onAction="#onChangeMode"
+                                  text="PressMode"/>
+                        <MenuItem fx:id="clickModeItem" mnemonicParsing="false" onAction="#onChangeMode"
+                                  text="ClickMode"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="InpuType">
+                    <items>
+                        <MenuItem fx:id="keyboardItem" mnemonicParsing="false" onAction="#onChangeInputType"
+                                  text="Keyboard"/>
+                        <MenuItem fx:id="mouseItem" mnemonicParsing="false" onAction="#onChangeInputType" text="Mouse"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openGitHub" text="Wiki"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Credits">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Developer"/>
+                        <MenuItem mnemonicParsing="false" text="Designer"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Suggestions">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openGitHub" text="GitHub"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Button fx:id="downMaxCps" layoutX="240.0" layoutY="137.0" mnemonicParsing="false" onAction="#onChangeCps"
+                prefHeight="50.0" prefWidth="45.0" text="↓">
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Button>
+        <Button fx:id="upMaxCps" cancelButton="true" layoutX="240.0" layoutY="41.0" mnemonicParsing="false"
+                onAction="#onChangeCps" prefHeight="50.0" prefWidth="45.0" text="↑">
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Button>
+        <Label fx:id="maxCpsLabel" alignment="CENTER" layoutX="248.0" layoutY="100.0" prefHeight="25.0" prefWidth="30.0"
+               text="10" textAlignment="CENTER" textFill="#ffffffcc">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="downMinCps" layoutX="176.0" layoutY="137.0" mnemonicParsing="false" onAction="#onChangeCps"
+                prefHeight="50.0" prefWidth="45.0" text="↓">
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Button>
+        <Button fx:id="upMinCps" cancelButton="true" layoutX="176.0" layoutY="41.0" mnemonicParsing="false"
+                onAction="#onChangeCps" prefHeight="50.0" prefWidth="45.0" text="↑">
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Button>
+        <Label fx:id="minCpsLabel" alignment="CENTER" layoutX="184.0" layoutY="100.0" prefHeight="25.0" prefWidth="30.0"
+               text="10" textAlignment="CENTER" textFill="#ffffffcc">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="power" layoutX="18.0" layoutY="41.0" mnemonicParsing="false" onAction="#powerEvent"
+                prefHeight="50.0" prefWidth="140.0" text="Desligado">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Button>
+        <ComboBox fx:id="keyPressBox" layoutX="105.0" layoutY="96.0" onAction="#onChangeKeys" prefHeight="27.0"
+                  prefWidth="53.0"/>
+        <ComboBox fx:id="keyStartBox" layoutX="105.0" layoutY="128.0" onAction="#onChangeKeys" prefHeight="27.0"
+                  prefWidth="53.0"/>
+        <ComboBox fx:id="keyStopBox" layoutX="105.0" layoutY="160.0" onAction="#onChangeKeys" prefHeight="27.0"
+                  prefWidth="53.0"/>
+        <Line endX="300.0" fill="WHITE" layoutY="26.0" scaleZ="0.5" stroke="WHITE"/>
+        <ComboBox fx:id="buttonPressBox" layoutX="105.0" layoutY="96.0" onAction="#onChangeButtons" prefHeight="27.0"
+                  prefWidth="53.0"/>
+        <ComboBox fx:id="buttonStartBox" layoutX="105.0" layoutY="128.0" onAction="#onChangeButtons" prefHeight="27.0"
+                  prefWidth="53.0"/>
+        <ComboBox fx:id="buttonStopBox" layoutX="105.0" layoutY="160.0" onAction="#onChangeButtons" prefHeight="27.0"
+                  prefWidth="53.0"/>
+        <Button fx:id="buttonKeyPress" alignment="TOP_LEFT" layoutX="18.0" layoutY="96.0" mnemonicParsing="false"
+                prefHeight="27.0" prefWidth="88.0" text="KeyPress"/>
+        <Button fx:id="buttonButtonPress" alignment="TOP_LEFT" layoutX="18.0" layoutY="96.0" mnemonicParsing="false"
+                prefHeight="27.0" prefWidth="88.0" text="ButtonPress"/>
+        <Button fx:id="buttonKeyStart" alignment="TOP_LEFT" layoutX="18.0" layoutY="128.0" mnemonicParsing="false"
+                prefHeight="27.0" prefWidth="88.0" text="KeyStart"/>
+        <Button fx:id="buttonButtonStart" alignment="TOP_LEFT" layoutX="18.0" layoutY="128.0" mnemonicParsing="false"
+                prefHeight="27.0" prefWidth="88.0" text="ButtonStart"/>
+        <Button fx:id="buttonKeyStop" alignment="TOP_LEFT" layoutX="18.0" layoutY="160.0" mnemonicParsing="false"
+                prefHeight="27.0" prefWidth="88.0" text="KeyStop"/>
+        <Button fx:id="buttonButtonStop" alignment="TOP_LEFT" layoutX="18.0" layoutY="160.0" mnemonicParsing="false"
+                prefHeight="27.0" prefWidth="88.0" text="ButtonStop"/>
+    </children>
+</AnchorPane>
