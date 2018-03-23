@@ -154,11 +154,11 @@ public class Controller implements Initializable {
     void onChangeMode(ActionEvent e) {
         if (e.getSource().equals(pressModeItem)) {
             autoclicker.setMode(AutoClicker.Modes.PRESSMODE);
-            pressModeItem.setText("PressMode ✓");
+            pressModeItem.setText("PressMode <+>");
             clickModeItem.setText("ClickMode");
         } else if (e.getSource().equals(clickModeItem)) {
             autoclicker.setMode(AutoClicker.Modes.CLICKMODE);
-            clickModeItem.setText("ClickMode ✓");
+            clickModeItem.setText("ClickMode <+>");
             pressModeItem.setText("PressMode");
         }
     }
@@ -221,9 +221,9 @@ public class Controller implements Initializable {
         minCpsLabel.setText(String.valueOf(autoclicker.getMinCps()));
         maxCpsLabel.setText(String.valueOf(autoclicker.getMaxCps()));
         if (autoclicker.getMode().equals(AutoClicker.Modes.PRESSMODE)) {
-            pressModeItem.setText("PressMode ✓");
+            pressModeItem.setText("PressMode <+>");
         } else if (autoclicker.getMode().equals(AutoClicker.Modes.CLICKMODE)) {
-            clickModeItem.setText("ClickMode ✓");
+            clickModeItem.setText("ClickMode <+>");
         }
         if (autoclicker.getInputType().equals("keyboard")) {
             showKeys();
